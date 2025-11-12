@@ -13,13 +13,14 @@ public class TelaPrincipal extends JFrame {
     private JLabel titulo;
 
     public TelaPrincipal() {
-        iniciarComponentes();
+        initComponents();
         configurarEventos();
     }
 
-    private void iniciarComponentes() {
+    private void initComponents() {
         setTitle("Controle Financeiro");
         setSize(400, 300);
+        setIconImage(new ImageIcon("C:\\Users\\depao\\Desktop\\ControleFinanceiro\\src\\view\\icon.png").getImage());
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(null); // layout manual

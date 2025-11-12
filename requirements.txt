@@ -1,0 +1,38 @@
+Engenharia de Requisitos
+
+# Sistema de Controle de Finanças
+Principais Funcionalidades:
+-
+- Mostrar saldo atual
+- Mostrar lista das alterações(Data/ Valor(Se for gasto, vermelho; se for adicionado, verde) / Descrição)
+- Criar um movimento
+    - Selecionar entre gasto ou ganho
+    - Selecionar a data(Se não for alterada, é a atual)
+    - Colocar o valor
+    - Selecionar Descrição(Obrigatório)
+    - Botão de Salvar
+- Botão de editar o valor(Não entra nos registros de movimentação, só altera o saldo inteiro
+- Botão de limpar registros de movimentações
+- Criar lista de descrições de gastos pré informadas, para na hora de registrar o movimento, selecionar a que for.
+- Descrições de Ganhos sempre são escritas manualmente
+- Botão de salvar movimentações em um PDF(Selecionar entre as datas que deseja salvar)
+- Mostrar gráfico dos gastos agrupando descrições
+- Botão de sair(Confirmar)
+
+
+Processo de Registro de Movimento
+-
+1. O usuário seleciona o botão de registrar movimento
+2. O usuário seleciona entre gasto/ganho.
+    2.1. Ao selecionar gasto:
+        2.1.1. Informa a data
+        2.1.2. Digita o valor
+        2.1.3. Seleciona a Descrição(Dentre as cadastradas)
+        2.1.4. Clica em salvar
+        2.1.5. Sistema registra a movimentação e atualiza o saldo
+    2.2. Ao selecionar ganho:
+        2.2.1. Informa a data
+        2.2.2. Digita o valor
+        2.2.3. Escreve a Descrição
+        2.2.4. Salva
+        2.2.5. Sistema registra a movimentação e atualiza o saldo

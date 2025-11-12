@@ -1,19 +1,25 @@
-import view.TelaPrincipal;
+package br.com.financeiro;
+
+import model.TipoMovimento;
+import model.Categoria;
+import service.FinanceiroService;
+
+import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
 
-        // Garante visual moderno do Swing
-        try {
-            javax.swing.UIManager.setLookAndFeel(
-                    javax.swing.UIManager.getSystemLookAndFeelClassName()
-            );
-        } catch (Exception e) {
-            System.out.println("Erro ao aplicar o estilo visual: " + e.getMessage());
-        }
+        FinanceiroService service = new FinanceiroService();
 
-        // Abrir a tela principal
-        TelaPrincipal tela = new TelaPrincipal();
-        tela.setVisible(true);
+        service.registrarMovimento(
+                TipoMovimento.GASTO,
+                LocalDate.now(),
+                50.0,
+                "Almoço",
+                new Categoria("Restaurante")
+        );
+
+        System.out.println("Saldo atual: R$ " + service.getSaldoAtual());
+        System.out.println(service.listarMovimentos());
     }
 }
